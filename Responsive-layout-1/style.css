@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+        CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+}
+
+
+/* =========================
+        SIDEBAR
+========================= */
+
+.left {
+    width: 20%;
+    height: 100vh;
+
+    background-color: rgb(57, 66, 99);
+
+    position: sticky;
+    top: 0;
+
+    flex-shrink: 0;
+}
+
+.left ul {
+    padding: 80px 0 0 40px;
+}
+
+.left ul li {
+    list-style: none;
+
+    color: white;
+
+    padding: 18px 0;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+        RIGHT CONTENT
+========================= */
+
+.right {
+    width: 80%;
+    min-height: 100vh;
+
+    background-color: rgb(142, 211, 216);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+        NAVBAR
+========================= */
+
+nav {
+    width: 100%;
+    height: 48px;
+
+    background-color: rgb(100, 139, 165);
+}
+
+nav ul {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 20px;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav input {
+    width: 170px;
+    height: 25px;
+}
+
+
+/* Toggle buttons hidden */
+#toggle-btn {
+    display: none;
+}
+
+.open,
+.close {
+    display: none;
+}
+
+
+/* =========================
+        HERO
+========================= */
+
+.hero {
+    height: 150px;
+
+    margin: 20px;
+    padding: 20px;
+
+    background-color: rgb(226, 227, 229);
+
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* =========================
+        CARDS
+========================= */
+
+.cards {
+    width: auto;
+
+    margin: 20px;
+
+    display: flex;
+    gap: 20px;
+}
+
+.cards > div {
+    height: 94px;
+
+    flex: 1;
+
+    background-color: rgb(158, 181, 217);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px;
+}
+
+
+/* =========================
+        BOXES
+========================= */
+
+.boxes {
+    margin: 20px;
+
+    height: 470px;
+
+    display: flex;
+
+    gap: 20px;
+}
+
+.box {
+    background-color: rgb(130, 190, 246);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Big left box */
+
+.box-1 {
+    width: 50%;
+    height: 100%;
+}
+
+
+/* Right side */
+
+.box-right {
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* Box 2 + Box 3 equal */
+
+.box-right .box {
+    flex: 1;
+}
+
+
+/* =========================
+        MOBILE
+       600px
+========================= */
+
+@media (max-width: 600px) {
+
+    /* SIDEBAR */
+    .left {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 70%;
+        height: 100vh;
+
+        display: none;
+
+        z-index: 100;
+    }
+
+    #toggle-btn:checked ~ .left {
+        display: block;
+    }
+
+    .open {
+        display: block;
+        cursor: pointer;
+    }
+
+    .close {
+        display: block;
+        text-align: right;
+        padding: 15px;
+        cursor: pointer;
+    }
+
+
+    /* RIGHT CONTENT */
+    .right {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+
+    /* NAVBAR */
+    nav {
+        height: 45px;
+    }
+
+    nav ul {
+        padding: 0 10px;
+    }
+
+    nav input {
+        width: 120px;
+        height: 22px;
+    }
+
+
+    /* HERO */
+    .hero {
+        height: 120px;
+
+        margin: 15px 10px;
+        padding: 15px;
+
+        font-size: 13px;
+    }
+
+
+    /* CARDS */
+    .cards {
+        width: auto;
+        margin: 10px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .cards > div {
+        width: 100%;
+        height: 80px;
+
+        flex: none;
+    }
+
+
+    /* BOXES */
+    .boxes {
+        width: auto;
+        margin: 10px;
+
+        height: auto;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+
+    /* BOX 1 */
+    .box-1 {
+        width: 100%;
+        height: 200px;
+
+        flex: none;
+    }
+
+
+    /* BOX 2 + BOX 3 */
+    .box-right {
+        width: 100%;
+        height: 400px;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 10px;
+    }
+
+    .box-right .box {
+        width: 100%;
+
+        min-height: 0;
+
+        flex: 1;
+    }
+}

@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+/* =========================
+        CONTAINER
+========================= */
+
+.container {
+    width: 100%;
+    height: 100vh;
+
+    padding: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    color: white;
+    text-align: center;
+}
+
+
+/* =========================
+          NAV
+========================= */
+
+nav {
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    gap: 10px;
+
+    flex-shrink: 0;
+}
+
+.logo {
+    width: 20%;
+    height: 50px;
+
+    background-color: #930417;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu {
+    width: 80%;
+    height: 50px;
+
+    background-color: #cc3333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+          PAGE
+========================= */
+
+.page {
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+
+/* =========================
+          MAIN
+========================= */
+
+.main {
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+
+/* =========================
+         HEADER
+========================= */
+
+.header {
+    width: 100%;
+    height: 55px;
+
+    background-color: #330000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+         MIDDLE
+========================= */
+
+.middle {
+    width: 100%;
+
+    flex: 1;
+
+    display: flex;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+
+/* =========================
+        ARTICLES
+========================= */
+
+.articles {
+    width: 70%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+.row {
+    flex: 1;
+
+    display: flex;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+.article {
+    width: 50%;
+
+    background-color: #b0bfc6;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #333;
+}
+
+
+/* =========================
+          SIDE
+========================= */
+
+.side {
+    width: 30%;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    min-height: 0;
+}
+
+.social {
+    flex: 1;
+
+    background-color: #b491a3;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tagcloud {
+    height: 50px;
+
+    background-color: #930417;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+
+/* =========================
+           ADS
+========================= */
+
+.ads {
+    width: 20%;
+    height: 100%;
+
+    background-color: #d19a9c;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =========================
+          FOOTER
+========================= */
+
+footer {
+    width: 100%;
+    height: 50px;
+
+    background-color: #4c2c31;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+}
+
+/* =================================================
+                    TABLET
+        481px — 768px
+================================================= */
+
+@media (max-width: 768px) {
+
+    body {
+        height: 100%;
+    }
+
+    .container {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+
+        padding: 10px;
+        gap: 10px;
+    }
+
+    /* NAV */
+
+    nav {
+        width: 100%;
+        height: 50px;
+        flex-shrink: 0;
+    }
+
+    .logo {
+        width: 20%;
+        height: 50px;
+    }
+
+    .menu {
+        width: 80%;
+        height: 50px;
+    }
+
+
+    /* PAGE */
+
+    .page {
+        width: 100%;
+
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* ADS */
+
+    .ads {
+        width: 100%;
+        height: 40px;
+
+        order: -1;
+        flex-shrink: 0;
+    }
+
+
+    /* MAIN */
+
+    .main {
+        width: 100%;
+
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        width: 100%;
+        height: 55px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* MIDDLE */
+
+    .middle {
+        width: 100%;
+
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+    /* ARTICLES */
+
+    .articles {
+        width: 100%;
+
+        flex: 1;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .row {
+        width: 100%;
+
+        flex: 1;
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+
+        min-height: 0;
+    }
+
+    .article {
+        width: 50%;
+        height: auto;
+
+        flex: 1;
+
+        background-color: #b0bfc6;
+    }
+
+
+    /* SOCIAL + TAGCLOUD */
+
+    .side {
+        width: 100%;
+
+        height: 80px;
+        flex-shrink: 0;
+
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .social {
+        width: 50%;
+        height: 80px;
+
+        flex: none;
+    }
+
+    .tagcloud {
+        width: 50%;
+        height: 80px;
+
+        flex: none;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+        height: 50px;
+
+        flex-shrink: 0;
+    }
+}
+
+/* =================================================
+                    MOBILE
+                    480px
+================================================= */
+
+@media (max-width: 480px) {
+
+    .container {
+        width: 100%;
+        min-height: 100vh;
+        padding: 5px;
+        gap: 5px;
+    }
+
+    /* NAV */
+
+    nav {
+        width: 100%;
+        height: 45px;
+        gap: 5px;
+    }
+
+    .logo {
+        width: 50%;
+        height: 45px;
+    }
+
+    .menu {
+        width: 50%;
+        height: 45px;
+    }
+
+
+    /* PAGE */
+
+    .page {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* ADS */
+
+    .ads {
+        width: 100%;
+        height: 40px;
+        min-height: 40px;
+
+        order: -1;
+
+        flex-shrink: 0;
+    }
+
+
+    /* MAIN */
+
+    .main {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        width: 100%;
+        height: 50px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* MIDDLE */
+
+    .middle {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* ARTICLES */
+
+    .articles {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* EACH ROW */
+
+    .row {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* EACH ARTICLE */
+
+    .article {
+        width: 100%;
+        height: 80px;
+
+        min-height: 80px;
+
+        flex: none;
+
+        background-color: #b0bfc6;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    /* SIDE */
+
+    .side {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 5px;
+
+        flex: none;
+    }
+
+
+    /* SOCIAL */
+
+    .social {
+        width: 100%;
+        height: 60px;
+        min-height: 60px;
+
+        flex: none;
+    }
+
+
+    /* TAGCLOUD */
+
+    .tagcloud {
+        width: 100%;
+        height: 50px;
+        min-height: 50px;
+
+        flex: none;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        width: 100%;
+        height: 45px;
+
+        flex-shrink: 0;
+    }
+}
